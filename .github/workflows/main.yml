@@ -1,33 +1,35 @@
-# name of the workflow/pipline
-name: ETL pipeline Demo
+# name of the workflow/pipeline
+name: ETL Pipeline Demo
 
 on:
-    push:
-        branches:
-        - main
+  push:
+    branches:
+      - main
 
 jobs:
-     extract-data:
-        runs-on: ubuntu-latest
-        steps:
-             - name: checkout code
-               uses: action/checkout@v2
-              
-             - name: run extract.py
-               run: python extract.py
-      tranform-data-job:
-        runs-on: ubuntu-latest
-        steps:
-             - name: checkout code
-               uses: action/checkout@v2
-              
-             - name: run transform.py
-               run: python transform.py 
-      load-data-demo:
-        runs-on: ubuntu-latest
-        steps:
-             - name: checkout code
-               uses: action/checkout@v2
-              
-             - name: run load.py
-               run: python load.py 
+  extract-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run extract.py
+        run: python extract.py
+
+  transform-data-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run transform.py
+        run: python transform.py
+
+  load-data-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run load.py
+        run: python load.py
