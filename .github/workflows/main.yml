@@ -1,34 +1,33 @@
 # name of the workflow/pipline
-name: github action demo pipeline
+name: ETL pipeline Demo
 
-#trigger event
 on:
-   push:
-       branches:
-       - main
+    push:
+        branches:
+        - main
+
 jobs:
-     extract-data-job:
+     extract-data:
         runs-on: ubuntu-latest
         steps:
-              - name: checkout code
-                uses: actions/checkout@v2
-
-              - name: run extract.py
-                run: python extract.py
-      transform-data-job:
+             - name: checkout code
+               uses: action/checkout@v2
+              
+             - name: run extract.py
+               run: python extract.py
+      tranform-data-job:
         runs-on: ubuntu-latest
         steps:
-              - name: checkout code
-                uses: actions/checkout@v2
-
-              - name: run transform.py
-                run: python transform.py
-      load-data-job:
+             - name: checkout code
+               uses: action/checkout@v2
+              
+             - name: run transform.py
+               run: python transform.py 
+      load-data-demo:
         runs-on: ubuntu-latest
         steps:
-              - name: checkout code
-                uses: actions/checkout@v2
-
-              - name: run load.py
-                run: python load.py
-      
+             - name: checkout code
+               uses: action/checkout@v2
+              
+             - name: run load.py
+               run: python load.py 
