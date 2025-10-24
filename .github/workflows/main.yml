@@ -13,7 +13,7 @@ jobs:
 
          steps:
               - name: checkout code
-                uses: actions/chekout@v2
+                uses: actions/checkout@v2
 
               - name: print message
                 run: echo "welcome to gothub actions"
