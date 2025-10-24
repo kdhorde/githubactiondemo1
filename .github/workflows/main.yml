@@ -17,8 +17,7 @@ jobs:
 
               - name: run extract.py
                 run: python extract.py
-
-transform-data-job:
+      transform-data-job:
          runs-on: ubuntu-latest
 
          steps:
@@ -27,8 +26,7 @@ transform-data-job:
 
               - name: run transform.py
                 run: python transform.py
-
-load-data-job:
+      load-data-job:
          runs-on: ubuntu-latest
 
          steps:
