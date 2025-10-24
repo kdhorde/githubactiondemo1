@@ -16,6 +16,5 @@ jobs:
                 uses: actions/chekout@v2
 
               - name: print message
-                runs: echo "welcome to gothub actions"
-     
+                run: echo "welcome to gothub actions"
      
